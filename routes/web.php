@@ -32,10 +32,18 @@ Route::get('r2', function () {
     return view('welcome');
 });
 */
-
+/*修改Route接收參數
 Route::get('hello/{name}', function ($name) {
     return 'Hello, '.$name;
 });
+*/
+//修改參數成選擇性
+Route::get('hello/{name}', function ($name='Everybody') {
+    return 'Hello, '.$name;
+});
+
+
+
 
 
 
