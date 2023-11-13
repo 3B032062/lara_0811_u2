@@ -12,17 +12,18 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-/*
+/*設定Route 回傳 view
 Route::get('/', function () {
     return view('welcome');
 });
 */
-/*
+/*設定Route 回傳 字串
 Route::get('/', function () {
     return 'welcome';
 });
 */
 
+/*設定Route 跳轉Route
 Route::get('r1', function () {
     return redirect('r2');
 });
@@ -30,5 +31,13 @@ Route::get('r1', function () {
 Route::get('r2', function () {
     return view('welcome');
 });
+*/
+
+Route::get('hello/{name}', function ($name) {
+    return 'Hello, '.$name;
+});
+
+
+
 
 
