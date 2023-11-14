@@ -53,9 +53,11 @@ Route::group(['prefix'=> 'admin'],function () {
     });
 }) ;
 */
-Route::get('hello'[HomeController::class],'index'>name('home.index'));
+//Route::get('hello'[HomeController::class],'index'>name('home.index'));
 
-
+Route::get('home', function () {
+    return view('home');
+});
 
 
 
